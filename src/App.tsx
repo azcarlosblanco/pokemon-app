@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { Login } from './pages/Login';
 import { Home } from './pages/Home';
 import { RootState } from './store';
+import { MainLayout } from './layouts/MainLayout';
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
   const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated);
@@ -31,7 +32,9 @@ function App() {
           path="/"
           element={
             <PrivateRoute>
-              <Home />
+              <MainLayout>
+                <Home />
+              </MainLayout>
             </PrivateRoute>
           }
         />

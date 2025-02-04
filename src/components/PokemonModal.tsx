@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   Dialog,
@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import { fetchPokemonDetails } from '../features/pokemon/pokemonSlice';
 import type { RootState, AppDispatch } from '../store';
-import { Pokemon, PokemonModalProps } from '../types';
+import { PokemonModalProps } from '../types';
 
 
 export const PokemonModal = ({ pokemon, onClose }: PokemonModalProps) => {
